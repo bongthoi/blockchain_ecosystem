@@ -1,0 +1,43 @@
+{
+  "name": "hypernodejs-api",
+  "version": "2.0.0",
+  "description": "es6 is use hypernodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bongthoi/hypernodejsv2.git"
+  },
+  "keywords": [
+    "hypernodejs"
+  ],
+  "author": "glorious corp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bongthoi/hypernodejsv2/issues"
+  },
+  "homepage": "https://github.com/bongthoi/hypernodejsv2#readme",
+  "devDependencies": {
+    "composer-connector-embedded": "^0.16.0",
+    "composer-cucumber-steps": "^0.16.0",
+    "composer-admin": "^0.16.0",
+    "composer-client": "^0.16.0",
+    "composer-common": "^0.16.0",
+    "composer-runtime": "^0.16.0",
+    "composer-runtime-hlfv1": "^0.16.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "fabric-client": "^1.0.2",
+    "fs": "0.0.1-security",
+    "mysql": "^2.16.0",
+    "path": "^0.12.7",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "sleep": "^5.1.1"
+  }
+}

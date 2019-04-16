@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>
+    <%= title%>
+  </title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="/dashboard/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/dashboard/dist/css/AdminLTE.min.css">
+
+  <link rel="stylesheet" href="/dashboard/dist/css/skins/skin-blue.min.css">
+  <link href="/css/cart.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+
+    <!-- Main Header -->
+    <% include ../partials/header %>
+
+      <!-- Left side column. contains the logo and sidebar -->
+      <% include ../partials/buyer/leftmenu %>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+          <section class="content-header">
+            <h1>
+              <%=title%>
+                <small>more Info</small>
+            </h1>
+            <!-- Cart Header -->
+
+          </section>
+
+          <!-- Main content -->
+          <section class="content">
+
+            <!-- Your Page Content Here -->
+
+            <%if(products.length>0){%>
+              <div class="cart page">
+                <ul class="list-group">
+                    <li class="list-group-item clearfix">
+                        <div class="col-xs-3"><strong>Product Name</strong></div>
+                        <div class="col-xs-2 text-right"><strong>Unit Price</strong></div>
+                        <div class="col-xs-2 text-right"><strong>Quantity</strong></div>
+                        <div class="col-xs-3 text-right"><strong>SubTotal</strong></div>
+                        <div class="col-xs-2 text-right"><strong>Operator</strong></div>
+                      </li>
+                  <%for(var i=0;i<products.length;i++){%>
+                    <li class="list-group-item clearfix">
+                      <div class="col-xs-3">
+                        <strong><%=products[i].item.title%></strong><br/>
+                        <em><%=products[i].item.description%></em>
+                      </div>
+                      <div class="col-xs-2 text-right">
+                        <span class="badge"><%=products[i].item.price%></span>
+                      </div>
+                      <div class="col-xs-2 text-right">
+                        <span class="badge"><%=products[i].quantity%></span>
+                      </div>
+                      <div class="col-xs-3 text-right">
+                        <%=products[i].subtotal%> <%=symbol%>
+                      </div>
+                      <div class="col-xs-2 text-right">
+                        <a href="/private/buyer/remove/<%=products[i].item.id%>"><i class="fa fa-trash-o"></i></a>
+                      </div>
+                    </li>
+                    <%}%>
+                </ul>
+              </div>
+              <div class="text-right">
+                <strong>Total: <%=totalPrice%> <%=symbol%></strong>
+              </div>
+              <hr>
+              <div class="text-right">
+                <a href="/private/buyer/deletecart" type="button" class="btn btn-danger">Delete All</a>
+                <a href="/private/buyer/productlist" type="button" class="btn btn-info">Continue Shopping</a>
+                <a href="/private/buyer/checkout" type="button" class="btn btn-success">Checkout</a>
+              </div>              
+              <%}else{%>Your shopping cart is empty.
+                <%}%>
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Main Footer -->
+        <% include ../partials/footer%>
+
+          <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+          <div class="control-sidebar-bg"></div>
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- REQUIRED JS SCRIPTS -->
+
+  <!-- jQuery 2.2.3 -->
+  <script src="/dashboard/plugins/jQuery/jquery-2.2.3.min.js"></script>
+  <!-- Bootstrap 3.3.6 -->
+  <script src="/dashboard/bootstrap/js/bootstrap.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="/dashboard/dist/js/app.min.js"></script>
+
+  <!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. Slimscroll is required when using the
+     fixed layout. -->
+</body>
+
+</html>

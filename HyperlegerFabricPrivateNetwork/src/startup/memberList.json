@@ -1,0 +1,29 @@
+{ "members":
+    [
+        {"type": "Seller", "pw": "nga", "companyName": "Glorious VietNam, Inc", "id": "nga@gloriousvn.com"},
+	{"type": "Seller", "pw": "thanh", "companyName": "Sieu Thi Dien May, Inc", "id": "sieu@sieuthidienmay.com"},
+        {"type": "Shipper", "pw": "speedmatters", "companyName": "ChuyenPhatNhanh, Inc", "id": "chuyen@chuyenphatnhanh.com"},  
+	{"type": "Shipper", "pw": "speedmatters", "companyName": "GiaoHangNhanh, Inc", "id": "giao@giaohangnhanh.com"},     
+        {"type": "Provider", "pw": "info", "companyName": "The Apple Ltd", "id": "app@theapple.com"},
+ 	{"type": "Provider", "pw": "info", "companyName": "The Samsung Ltd", "id": "sam@samsung.com"},     
+        {"type": "FinanceCo", "pw": "easymoney", "companyName": "Techcombank Inc", "id": "easymoney@easymoneyinc.com"}
+    ],
+    "items":
+    [
+        {"itemNo": 1, "itemDescription": "Coffee", "quantity": 2000, "unitPrice": 1000},
+        {"itemNo": 2, "itemDescription": "Coconut", "quantity": 2000, "unitPrice": 800},
+        {"itemNo": 3, "itemDescription": "Coconut Candy", "quantity": 1000, "unitPrice": 750},
+        {"itemNo": 4, "itemDescription": "Coconut Coffee", "quantity": 4000, "unitPrice": 700},
+        {"itemNo": 5, "itemDescription": "IPhone 6 Plus", "quantity": 4000, "unitPrice": 650},
+        {"itemNo": 6, "itemDescription": "IPhone 6", "quantity": 4000, "unitPrice": 600},
+        {"itemNo": 7, "itemDescription": "IPhone 5 Plus", "quantity": 4000, "unitPrice": 550},
+	{"itemNo": 8, "itemDescription": "IPhone 5 ", "quantity": 4000, "unitPrice": 500},
+	{"itemNo": 9, "itemDescription": "Galaxy Note 3", "quantity": 4000, "unitPrice": 300},
+	{"itemNo": 10, "itemDescription": "Galaxy Note 8", "quantity": 4000, "unitPrice": 800},
+        {"itemNo": 11, "itemDescription": "Galaxy Note 9", "quantity": 4000, "unitPrice": 900}
+    ],
+    "assets":
+    [           
+        {"type": "Order", "id": "001", "buyer": "linh@vinhsang.com", "seller": "nga@gloriousvn.com", "items": [{"itemNo": 3, "quantity": 15}, {"itemNo": 4, "quantity": 20}] }
+    ]
+}

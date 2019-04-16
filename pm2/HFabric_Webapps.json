@@ -1,0 +1,30 @@
+{
+    "apps": [
+        {
+            "name" : "auth-api",
+            "script": "npm -- start",
+            "cwd" : "/home/user/blockchain_ecosystem/HyperlegerFabricPrivateNetwork/src/"
+        },
+        {
+            "name" : "hypernodejs-api",
+            "script": "npm -- start",
+            "cwd" : "/home/user/blockchain_ecosystem/hypernodejs-api"
+        },
+        {
+            "name" : "hypernodejs-app",
+            "script": "npm -- start",
+            "cwd" : "/home/user/blockchain_ecosystem/hypernodejs-app"
+        },
+        {
+            "name" : "mail-api",
+            "script": "npm -- start",
+            "cwd" : "/home/user/blockchain_ecosystem/mail-api"
+        },
+        {
+            "name": "start_rest_server",
+            "cwd": "/home/user/blockchain_ecosystem/pm2/scripts",
+            "script": "./start_rest_server.sh",
+            "exec_interpreter": "bash"
+        }
+    ]
+  }

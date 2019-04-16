@@ -1,0 +1,19 @@
+{
+    "apps": [
+        {
+            "name" : "ether_ropsten_api",
+            "script": "npm -- start",
+            "cwd" : "/home/user/blockchain_ecosystem/ether-ropsten-api"
+        },
+        {
+            "name" : "etherGateway_api",
+            "script": "npm -- start",
+            "cwd" : "/home/user/blockchain_ecosystem/etherGateway-api"
+        },
+        {
+            "name" : "etherRopsten_app",
+            "script": "npm -- start",
+            "cwd" : "/home/user/blockchain_ecosystem/etherRopsten-app"
+        }
+    ]
+  }
